@@ -51,7 +51,7 @@ class Instructor extends Person {
 //   * `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
 //   * `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
 ​
-class ProMgr extends Person {
+class ProMgr extends Instructor {
     constructor(promgr_attrs){
         super(promgr_attrs);
         this.gradClassName = promgr_attrs.gradClassName;
@@ -71,6 +71,17 @@ class ProMgr extends Person {
 //   * `PRAssignment` a method that receives a subject as an argument and logs out that the `student.name has submitted a PR for {subject}`
 //   * `sprintChallenge` similar to PRAssignment but logs out `student.name has begun sprint challenge on {subject}`
 ​
+class Student extends Person {
+    constructor(student_attrs){
+        super(student_attrs);
+        this.previousBackground = student_attrs.previousBackground;
+        this.className = student_attrs.className;
+        this.favSubjects = student_attrs.favSubjects;
+    }
+    listsSubjects(){ return `${this.name}'s favorite subjects are {this.favSubjects}.` }
+    PRAssignment(subject){ return `${this.name} has submitted a PR for ${subject}` }
+    sprintChallenge(){ }
+}
 
 
 /*
