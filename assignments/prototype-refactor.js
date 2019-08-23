@@ -73,18 +73,18 @@ function GameObject(attrs){
     return this.healthPoints--;
   }
   */
-  class CharacterStats extends GameObject{ // if you are extending you have to pass "super" in your constructor
-      constructor(char_stats){
-          super(char_stats);
-          this.healthPoints = char_stats.healthPoints;
-      }
-      takeDamage(){ return this.healthPoints--; }
-      /* attack(victim){
-          
-          console.log(`${this.name} attacks ${victim}, ${victim} loses {}`)
-      }
-      */
-  }
+class CharacterStats extends GameObject{ // if you are extending you have to pass "super" in your constructor
+    constructor(char_stats){
+        super(char_stats);
+        this.healthPoints = char_stats.healthPoints;
+    }
+    takeDamage(){ return this.healthPoints--; }
+    /* attack(victim){
+        
+        console.log(`${this.name} attacks ${victim}, ${victim} loses {}`)
+    }
+    */
+}
   
   /*
     === Humanoid (Having an appearance or character resembling that of a human.) ===
